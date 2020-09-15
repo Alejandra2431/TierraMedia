@@ -79,7 +79,7 @@ namespace Personaje
         public void Curar(int curacion)
         {
             int vidaNueva= this.vida + curacion;
-            if(vida>100)
+            if(vidaNueva>100)
             {
                 this.vida=100;
             }
