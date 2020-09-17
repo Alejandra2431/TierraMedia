@@ -22,20 +22,9 @@ namespace Personaje
         public int DefensaTotal(){
             return this.Arco.Defensa + this.Anillo.Defensa;
         }
-        public void Curar(int curacion)
+        public void Curar()
         {
-            if (curacion>0)
-            {
-                int vidaNueva= this.Vida + curacion;
-                if(vidaNueva>70)
-                {
-                    this.Vida=70;
-                }
-                else
-                {
-                    this.Vida=vidaNueva;
-                }
-            }
+            this.Vida= 70;
         }
         public void RecibirAtaque(int ataque)
         {
