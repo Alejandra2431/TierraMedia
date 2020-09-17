@@ -24,6 +24,10 @@ namespace Elemento
             return ataque;
 
         }
+        public void AgregarHechizo(Hechizo hechizo)
+        {
+            Libro.Add(hechizo);
+        }
         public void EliminarHechizo(Hechizo hechizo)
         {
             Libro.Remove(hechizo);
