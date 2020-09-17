@@ -1,7 +1,7 @@
 using System;
 using Elemento;
 
-namespace Personajes
+namespace Personaje
 {
     public class Humano
     {
