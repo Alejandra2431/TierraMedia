@@ -76,22 +76,9 @@ namespace Personaje
                 this.vida = vida;
             }
         }
-        public void Curar(int curacion)
+        public void Curar()
         {
-            if(curacion>0)
-            {
-                int vidaNueva= this.vida + curacion;
-                if(vidaNueva>100)
-                {
-                    this.vida=100;
-                }
-                else
-                {
-                    this.vida=vidaNueva;
-                }
-
-            }
-            
+            this.vida=100;
         }
 
     }
