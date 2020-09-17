@@ -6,10 +6,6 @@ namespace Personaje
 {
     public class Enano
     {
-        private string nombre;
-
-        private int vida;
-
         public string Nombre{get; private set;}
 
         public int Vida{get; private set;}
@@ -71,15 +67,17 @@ namespace Personaje
 
         public void Curar(int curacion)
         {
-            int vidaNueva = this.vida + curacion;
-
-            if(vidaNueva > 200)
+            if(curacion > 0)
             {
-                this.vida = 200;
-            }
-            else
-            {
-                this.vida=vidaNueva;
+                int vidaNueva = this.Vida + curacion;
+                if(vidaNueva > 100)
+                {
+                    this.Vida = 100;
+                }
+                else
+                {
+                    this.Vida = vidaNueva;
+                }
             }
         }
     }
