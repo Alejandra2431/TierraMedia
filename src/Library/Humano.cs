@@ -61,7 +61,7 @@ namespace Personajes
             }
         }
 
-        public void Curar(int curacion)
+        public void Curar()
         {
             this.Vida = 100;
         }
