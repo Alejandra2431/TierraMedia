@@ -14,38 +14,47 @@ namespace Personaje
 
         public int Vida{get; private set;}
 
-        public Mazo itemAtaque {get; private set;}
+        public Mazo Mazo {get; private set;}
 
-        public Armadura itemDefensa {get; private set;}
+        public Armadura Armadura {get; private set;}
 
-        public Enano(string nombre)
+        public Enano(string nombre, Mazo mazo, Armadura armadura)
         {
             this.Vida = 200;
             this.Nombre = nombre;
-            this.itemAtaque = new Mazo ("rompe tormentas",35,0);
-            this.itemDefensa = new Armadura("salva vidas",0,30);
+            this.Mazo = mazo;
+            this.Armadura = armadura;
         }
 
         public int AtaqueTotal()
         {
-            return this.itemAtaque.Ataque + this.itemDefensa.Ataque;
+            return this.Mazo.Ataque + this.Armadura.Ataque;
         }
 
         public int DefensaTotal()
         {
-            return this.itemAtaque.Defensa + this.itemDefensa.Defensa;
+            return this.Mazo.Defensa + this.Armadura.Defensa;
         }
 
-        public void RemoverItemDefensa()
+        public void RemoverArmadura()
         {
-            this.itemDefensa = null;
+            this.Armadura = null;
         }
 
-        public void RemoverItemAtaque()
+        public void RemoverMazo()
         {
-            this.itemAtaque = null;
+            this.Mazo = null;
         }
 
+        public void CambiarMazo(Mazo nuevo)
+        {
+            this.Mazo=nuevo;
+        }
+        public void CambiarArmadura(Armadura nuevo)
+        {
+            this.Armadura=nuevo;
+
+        }
         public void RecibirAtaque(int ataque)
         {
             int vida = this.Vida + this.DefensaTotal() - ataque;
