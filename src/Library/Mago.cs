@@ -78,15 +78,20 @@ namespace Personaje
         }
         public void Curar(int curacion)
         {
-            int vidaNueva= this.vida + curacion;
-            if(vidaNueva>100)
+            if(curacion>0)
             {
-                this.vida=100;
+                int vidaNueva= this.vida + curacion;
+                if(vidaNueva>100)
+                {
+                    this.vida=100;
+                }
+                else
+                {
+                    this.vida=vidaNueva;
+                }
+
             }
-            else
-            {
-                this.vida=vidaNueva;
-            }
+            
         }
 
     }
