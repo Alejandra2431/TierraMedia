@@ -55,11 +55,11 @@ namespace Personaje
         {
             int vida = this.Vida + this.DefensaTotal() - ataque;
 
-            if(vida < 0)
+            if(vida <= 0)
             {
                 this.Vida = 0;
             }
-            else
+            else if(vida <= 200 && vida > 0)
             {
                 this.Vida = vida;
             }
