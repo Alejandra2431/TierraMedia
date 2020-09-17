@@ -24,28 +24,46 @@ namespace Personaje
         }
         public void Curar(int curacion)
         {
-            int vidaNueva= this.Vida + curacion;
-            if(vidaNueva>100)
+            if (curacion>0)
             {
-                this.Vida=100;
-            }
-            else
-            {
-                this.Vida=vidaNueva;
+                int vidaNueva= this.Vida + curacion;
+                if(vidaNueva>70)
+                {
+                    this.Vida=70;
+                }
+                else
+                {
+                    this.Vida=vidaNueva;
+                }
             }
         }
         public void RecibirAtaque(int ataque)
         {
             int vida = this.Vida + this.DefensaTotal() - ataque;
-
             if(vida < 0)
             {
                 this.Vida = 0;
-            }else
+            }
+            else
             {
                 this.Vida = vida;
             }
         }
-
+        public void RemoverArco()
+        {
+            this.Arco= null;
+        }
+        public void RemoverAnillo()
+        {
+            this.Anillo= null;
+        }
+        public void CambiarArco(Arco arco)
+        {
+            this.Arco= arco;
+        }
+        public void CambiarAnillo(Anillo anillo)
+        {
+            this.Anillo= anillo;
+        }
     }
 }
