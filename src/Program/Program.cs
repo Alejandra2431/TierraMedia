@@ -19,6 +19,21 @@ namespace Program
             Espada espada1=new Espada("Espada Acero",50,5);
             Escudo escudo1= new Escudo("Escudo Madera",0,40);
             Humano humano1=new Humano("Charlie",espada1,escudo1);
+
+            BastonMagico baston1=new BastonMagico("Baston Hielo",40,0);
+            Hechizo hechizo1=new Hechizo("Escarcha",40,10);
+            LibroDeHechizos libro1 = new LibroDeHechizos("Biblia",hechizo1);
+            Mago mago1=new Mago("Gandalf",baston1,libro1);
+
+            // Mago Ataca Enano
+            enano1.RecibirAtaque(mago1.AtaqueTotal());
+            Console.WriteLine(enano1.Vida.ToString());
+
+            // Enano se Cura 
+            enano1.Curar();
+            Console.WriteLine(enano1.Vida.ToString());
+
+
         }
     }
 }

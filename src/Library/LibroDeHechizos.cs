@@ -10,6 +10,7 @@ namespace Elemento
 
         public LibroDeHechizos(string name,Hechizo hechizo)
         {
+            Libro= new ArrayList();
             this.Name=name;
             Libro.Add(hechizo);
         }
