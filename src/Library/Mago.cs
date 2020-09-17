@@ -34,7 +34,7 @@ namespace Personaje
         {
             this.Baston=null;
         }
-        public void EliminarLibroHechizo(LibroDeHechizos libro)
+        public void EliminarLibroHechizo()
         {
             this.Libro=null;
 
@@ -55,7 +55,7 @@ namespace Personaje
         tiene sentido por patron EXPERT que se encuentre en la propia clase. Tanto recibir ataque como curar afectan directamente
         a la vida del personaje, por lo tanto tiene sentido que estos comportamientos esten en la clase propia del personaje, ya que 
         este es experto en datos de la vida. */
-        
+
         public int AtaqueTotal()
         {
             int ataque = 0;
