@@ -7,45 +7,45 @@ namespace Personajes
     {
         public string Nombre { get; private set;}
         public int Vida {get; private set;}
-        public Espada ItemAtaque {get; private set;}
-        public Escudo ItemDefensa {get; private set;}
+        public Espada Espada {get; private set;}
+        public Escudo Escudo {get; private set;}
         
-        public Humano(string nombre)
+        public Humano(string nombre, Espada espada, Escudo escudo)
         {
             this.Nombre         = nombre;
             this.Vida           = 100;
-            this.ItemAtaque     = new Espada("Sable", 20, 0);
-            this.ItemDefensa    = new Escudo("Escudo de madera", 0, 15);
+            this.Espada         = espada;
+            this.Escudo         = escudo;
         }
 
         public int AtaqueTotal()
         {
-            return this.ItemAtaque.Ataque + this.ItemDefensa.Ataque;
+            return this.Espada.Ataque + this.Escudo.Ataque;
         }
 
         public int DefensaTotal()
         {
-            return this.ItemAtaque.Defensa + this.ItemDefensa.Ataque;
+            return this.Espada.Defensa + this.Escudo.Ataque;
         }
 
-        public void CambiarItemAtaque(Espada espada)
+        public void CambiarEspada(Espada espada)
         {
-            this.ItemAtaque = espada;
+            this.Espada = espada;
         }
 
-        public void CambiarItemDefensa(Escudo escudo)
+        public void CambiarEscudo(Escudo escudo)
         {
-            this.ItemDefensa = escudo;
+            this.Escudo = escudo;
         }
 
-        public void RemoverItemAtaque()
+        public void RemoverEspada()
         {
-            this.ItemAtaque = null;
+            this.Espada = null;
         }
 
-        public void RemoverItemDefensa()
+        public void RemoverEscudo()
         {
-            this.ItemDefensa = null;
+            this.Escudo = null;
         }
 
         public void RecibirAtaque(int ataque)
