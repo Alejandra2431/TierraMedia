@@ -8,6 +8,11 @@ namespace Program
     {
         static void Main(string[] args)
         {
+
+            /* Nos parecio que por principio SRP la clase que se deberia de ocupar de hacer las interacciones, es el Program , ya que no podemos hacer
+            una funcion general para todos los tipos, necesitamos ir haciendo los ataques y ir definiendolos de la siguiente manera. En caso de modificarse
+            como funcionan los ataques o las curaciones (las interacciones), solamente esta clase se deberia de cambiar, siendo esta su unica razon de cambio.*/
+
             Arco arco1= new Arco("Arco Fuego",20,0);
             Anillo anillo1 =new Anillo("Anillo Brillante",10,20);
             Elfo elfo1= new Elfo("Legolas",arco1,anillo1);
