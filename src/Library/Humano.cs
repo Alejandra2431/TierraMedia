@@ -63,18 +63,7 @@ namespace Personajes
 
         public void Curar(int curacion)
         {
-            if(curacion > 0)
-            {
-                int vidaNueva = this.Vida + curacion;
-                if(vidaNueva > 100)
-                {
-                    this.Vida = 100;
-                }
-                else
-                {
-                    this.Vida = vidaNueva;   
-                }
-            }
+            this.Vida = 100;
         }
     }
 }
