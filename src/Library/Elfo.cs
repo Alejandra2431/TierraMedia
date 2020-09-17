@@ -22,10 +22,6 @@ namespace Personaje
         public int DefensaTotal(){
             return this.Arco.Defensa + this.Anillo.Defensa;
         }
-        public void Curar()
-        {
-            this.Vida= 70;
-        }
         public void RecibirAtaque(int ataque)
         {
             int vida = this.Vida + this.DefensaTotal() - ataque;
@@ -53,6 +49,10 @@ namespace Personaje
         public void CambiarAnillo(Anillo anillo)
         {
             this.Anillo= anillo;
+        }
+        public void Curar()
+        {
+            this.Vida= 70;
         }
     }
 }
