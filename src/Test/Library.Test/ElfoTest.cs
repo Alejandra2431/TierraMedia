@@ -18,7 +18,7 @@ namespace Test.Library
 
             Mazo mazo1= new Mazo("Martillo", 40, 0);
             Armadura armadura1=new Armadura("Armadura Hierro", 0, 50);
-            Enano enano1=new Enano("Gimbli", mazo1, armadura1);
+            this.enano1=new Enano("Gimbli", mazo1, armadura1);
         }
         [Test]
         public void AtaqueTotalTest()
@@ -47,26 +47,26 @@ namespace Test.Library
         {
             Arco arco= new Arco("Fuego2", 15, 0);
             this.elfo1.CambiarArco(arco);
-            Assert.AreEqual(this.elfo1.AtaqueTotal, 25);
+            Assert.AreEqual(this.elfo1.AtaqueTotal(), 25);
         }
         [Test]
         public void CambiarAnilloTest()
         {
-            Anillo anillo= new anillo("Brillante2", 0, 30);
+            Anillo anillo= new Anillo("Brillante2", 0, 30);
             this.elfo1.CambiarAnillo(anillo);
-            Assert.AreEqual(this.elfo1.DefensaTotal, 30);
+            Assert.AreEqual(this.elfo1.DefensaTotal(), 30);
         }  
         [Test]
         public void CurarTest()
         {
             this.elfo1.Curar();
-            Asser.AreEqual(this.elfo1.Vida, 70);
+            Assert.AreEqual(this.elfo1.Vida, 70);
         }
-        [This]
+        [Test]
         public void RecibirAtaqueTest()
         {
-            this.elfo1.RecibirAtaque(this.enano1.AtaqueTotal);
-            Assert.AreEqual(this.elfo1.Vida,50)
+            this.elfo1.RecibirAtaque(this.enano1.AtaqueTotal());
+            Assert.AreEqual(this.elfo1.Vida,50);
         }
     }
 }
